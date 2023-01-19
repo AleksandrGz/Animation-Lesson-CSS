@@ -1,0 +1,157 @@
+#parent{
+	margin: 50px auto;
+	width: 600px;
+}
+.all{
+	position: relative;
+	border-bottom: 1px solid #808080;
+}
+div{
+	margin-bottom: 50px;
+	text-align: center;
+
+}
+@keyframes elem1{
+from{
+	background-color: white;
+}
+to{
+	background-color: red;
+}
+}
+#elem1{
+	width: 200px;
+	height: 200px;
+	border: 1px solid red;
+	animation: elem1 3s infinite;
+}
+@keyframes elem2{
+from{
+	margin-left: 0px;
+}
+to{
+	margin-left: 400px;
+}
+}
+#elem2{
+	width: 100px;
+	height:100px;
+	border: 1px solid red;
+	animation: elem2 3s infinite ease-out;
+}
+@keyframes elem3{
+0%{left:0px; top:0px}
+25%{left:250px; top:0px}
+50%{left:250px; top:250px}
+75%{left:0px; top:250px}
+100%{left:0px; top:0px}
+}
+#elem3{
+	width: 50px;
+	height:50px;
+	border: 1px solid red;
+	animation: elem3 5s infinite linear;
+	position: absolute;
+}
+#elem3box{
+	height: 350px;
+}
+@keyframes elem4{
+0%{left:0px; top:0px; background-color: white}
+25%{left:250px; top:0px; background-color: red}
+50%{left:250px; top:250px; background-color: white}
+75%{left:0px; top:250px; background-color: red}
+100%{left:0px; top:0px; background-color: white}
+}
+#elem4{
+	width: 50px;
+	height:50px;
+	border: 1px solid red;
+	animation: elem4 5s infinite linear;
+	position: absolute;
+}
+#elem4box{
+	height: 350px;
+}
+@keyframes elem5{
+from{
+	margin-left: 0px;
+}
+to{
+	margin-left: 400px;
+}
+}
+#elem5{
+	width: 50px;
+	height:50px;
+	border: 1px solid red;
+	animation: elem5 3s infinite ease-out alternate;
+}
+@keyframes elem6{
+from{
+	width: 200px;
+}
+to{
+	width: 500px;
+}
+}
+#elem6{
+	width: 200px;
+	height:50px;
+	border: 1px solid red;
+	animation: elem6 2s paused infinite alternate;	
+}
+#elem6:hover{
+	animation-play-state: running;
+}
+@keyframes elem7{
+from{
+	width: 150px;
+}
+to{
+	width: 500px;
+}
+}
+#elem7 #green7{
+	width: 70px;
+	height: 50px;
+	border: 1px solid green;
+	line-height: 1;
+}
+#elem7 #red7{
+	width: 150px;
+	height: 50px;
+	border: 1px solid red;
+	animation: elem7 2s paused infinite alternate;
+}
+#elem7 #green7:hover + #red7{
+	animation-play-state: running;
+}
+@keyframes elem8{
+40%, 70%, 90%{bottom:0;animation-timing-function:ease-out;}
+0%{bottom:220px;animation-timing-function:ease-in;}
+55%{bottom:80px;animation-timing-function:ease-in;}
+80%{bottom:40px;animation-timing-function:ease-in;}
+95%{bottom:20px;animation-timing-function:ease-in;}
+100%{bottom:0;animation-timing-function:ease-out;}
+}
+@keyframes elem8left{
+	from{left:0;}
+	to{left:88%;}
+}
+#elem8cube{
+	width: 250px;
+	height:250px;
+	border: 1px solid red;
+	margin: 0px auto;
+	position: relative;
+}
+#elem8circle{
+	width: 30px;
+	line-height: 30px;
+	border-radius:100%;
+	background-color: red;
+	margin:0;
+	position: absolute;
+	animation: elem8 5s infinite, elem8left 5s infinite;
+}
